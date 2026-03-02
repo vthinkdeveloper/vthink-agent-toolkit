@@ -1,0 +1,40 @@
+{
+  "_readme": "Claude Code settings template for a Python project (works with pip, poetry, or uv).",
+  "_usage": "Copy to .claude/settings.json in your project root. Adjust allow/deny rules to match your project structure.",
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(pip run *)",
+      "Bash(poetry install)",
+      "Bash(poetry run *)",
+      "Bash(uv *)",
+      "Bash(python *)",
+      "Bash(python3 *)",
+      "Bash(pytest *)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(ls *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "WebSearch"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(curl * | bash)",
+      "Bash(wget * | sh)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/check-naming-conventions.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -111,6 +111,44 @@ CLAUDE.md snippets for always-follow instructions. Place files in `rules/`.
 
 ---
 
+## MCP Configurations
+
+Ready-to-paste MCP server config snippets. Place files in `mcp/`.
+
+| Name | File | What it enables | Notes |
+|------|------|-----------------|-------|
+| filesystem | [`mcp/filesystem.json`](mcp/filesystem.json) | Scoped file access outside the project directory | Set allowed paths |
+| github | [`mcp/github.json`](mcp/github.json) | Read/write GitHub issues, PRs, repos | Requires `$GITHUB_TOKEN` |
+| postgres | [`mcp/postgres.json`](mcp/postgres.json) | Query a PostgreSQL database | Requires `$PG_CONNECTION_STRING` |
+| puppeteer | [`mcp/puppeteer.json`](mcp/puppeteer.json) | Browser automation and web scraping | Downloads Chromium on first use |
+| sqlite | [`mcp/sqlite.json`](mcp/sqlite.json) | Query a local SQLite database | Set db file path |
+
+---
+
+## Settings Templates
+
+Pre-built `.claude/settings.json` starters by project type. Place files in `settings-templates/`.
+
+| Name | File | For |
+|------|------|-----|
+| java-spring | [`settings-templates/java-spring.json`](settings-templates/java-spring.json) | Java / Spring Boot (Maven) |
+| nodejs | [`settings-templates/nodejs.json`](settings-templates/nodejs.json) | Node.js / Express backend |
+| python | [`settings-templates/python.json`](settings-templates/python.json) | Python (pip / poetry / uv) |
+| react | [`settings-templates/react.json`](settings-templates/react.json) | React frontend (CRA / Vite / Next.js) |
+
+---
+
+## Workflows
+
+Multi-agent orchestration patterns. Place files in `workflows/`.
+
+| Name | File | Description | Author |
+|------|------|-------------|--------|
+| feature-development | [`workflows/feature-development.md`](workflows/feature-development.md) | BDD → implement → test → ship. Full cycle from feature description to pushed code. | adharsh2208vthink |
+| pr-review-pipeline | [`workflows/pr-review-pipeline.md`](workflows/pr-review-pipeline.md) | Conventions check → test runner → QA guide. End-to-end PR review for a given PR number. | adharsh2208vthink |
+
+---
+
 ## How to Update This File
 
 When you open a PR with a new contribution, add a row to the relevant table above:
