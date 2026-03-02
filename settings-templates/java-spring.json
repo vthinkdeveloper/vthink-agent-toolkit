@@ -1,6 +1,7 @@
 {
   "_readme": "Claude Code settings template for a Java / Spring Boot project using Maven.",
   "_usage": "Copy to .claude/settings.json in your project root. Adjust allow/deny rules to match your project structure.",
+  "_hook_note": "This template references check-naming-conventions.sh. Copy it first: cp vthink-claudecode-toolkit/hooks/pre-tool/check-naming-conventions.sh .claude/hooks/pre-tool/ && chmod +x .claude/hooks/pre-tool/check-naming-conventions.sh",
   "permissions": {
     "allow": [
       "Bash(mvn *)",

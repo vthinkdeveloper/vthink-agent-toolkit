@@ -8,20 +8,31 @@ MCP servers extend Claude Code with additional tools and data sources — databa
 
 ## How to Use
 
-1. Pick the MCP server(s) you need from the files in this directory
-2. Open (or create) `.claude/settings.json` in your project root
-3. Add the snippet under `mcpServers`:
+Each file in this directory contains a JSON object with two parts:
+- `_readme` / `_setup` / `_security` — documentation only (ignored by Claude Code)
+- `mcpServers` — the actual config block to paste
+
+**Steps:**
+
+1. Open the `.json` file for the server you want
+2. Copy **only the `mcpServers` block** (not the `_readme`/`_setup` keys)
+3. Open (or create) `.claude/settings.json` in your project root
+4. Paste under the top-level `mcpServers` key:
 
 ```json
 {
   "mcpServers": {
-    "github": { ...paste snippet here... },
-    "postgres": { ...paste snippet here... }
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "$GITHUB_TOKEN" }
+    }
   }
 }
 ```
 
-4. Restart Claude Code — the new tools will be available
+5. Set any required environment variables (see each file's `_setup` notes)
+6. Restart Claude Code — the new tools will be available
 
 ## Available Configs
 
