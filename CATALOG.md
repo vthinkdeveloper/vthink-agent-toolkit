@@ -26,7 +26,7 @@ Sub-agents with defined roles and responsibilities. Place files in `agents/<cate
 
 | Name | File | Description | Author |
 |------|------|-------------|--------|
-| _(none yet)_ | | | |
+| test-runner | [`agents/testing/test-runner.md`](agents/testing/test-runner.md) | Run the project's test suite, auto-fix failures, and verify all tests pass. Auto-detects test command from project config. | adharsh2208vthink |
 
 ### devops
 
@@ -40,23 +40,35 @@ Sub-agents with defined roles and responsibilities. Place files in `agents/<cate
 
 Workflow and domain knowledge prompts. Place files in `skills/<category>/`.
 
-### frontend
-
-| Name | File | Description | Author |
-|------|------|-------------|--------|
-| _(none yet)_ | | | |
-
 ### backend
 
 | Name | File | Description | Author |
 |------|------|-------------|--------|
-| _(none yet)_ | | | |
+| generate-endpoint | [`skills/backend/generate-endpoint.md`](skills/backend/generate-endpoint.md) | Generate a complete CRUD endpoint for a new resource. Auto-detects project structure and adapts to existing conventions. | adharsh2208vthink |
 
 ### data
 
 | Name | File | Description | Author |
 |------|------|-------------|--------|
 | _(none yet)_ | | | |
+
+### frontend
+
+| Name | File | Description | Author |
+|------|------|-------------|--------|
+| _(none yet)_ | | | |
+
+### workflow
+
+| Name | File | Description | Author |
+|------|------|-------------|--------|
+| anonymize-prompt | [`skills/workflow/anonymize-prompt.md`](skills/workflow/anonymize-prompt.md) | Generate a privacy-safe, anonymized prompt for pasting into external search engines and AI chatbots without leaking proprietary details. | adharsh2208vthink |
+| bdd-gherkin | [`skills/workflow/bdd-gherkin.md`](skills/workflow/bdd-gherkin.md) | Generate BDD Gherkin feature files from requirements — even vague ones — through a collaborative clarifying conversation. | adharsh2208vthink |
+| commit-push | [`skills/workflow/commit-push.md`](skills/workflow/commit-push.md) | Stage, generate a Conventional Commits message, get user approval, commit, and push in one workflow. | adharsh2208vthink |
+| conventions-check | [`skills/workflow/conventions-check.md`](skills/workflow/conventions-check.md) | Check code changes against project conventions discovered from the codebase itself. Supports PR number or file path mode. | adharsh2208vthink |
+| give-me-a-commit-message | [`skills/workflow/give-me-a-commit-message.md`](skills/workflow/give-me-a-commit-message.md) | Suggest a commit message from current changes. Extracts ticket ID from branch name. Does NOT commit. | adharsh2208vthink |
+| qa-guide | [`skills/workflow/qa-guide.md`](skills/workflow/qa-guide.md) | Generate a comprehensive QA testing guide for a GitHub PR, written for non-technical testers. | adharsh2208vthink |
+| ship | [`skills/workflow/ship.md`](skills/workflow/ship.md) | Quality gate + commit + push in one step. Runs conventions check, generates commit message with ticket ID, and pushes. | adharsh2208vthink |
 
 ---
 
@@ -66,7 +78,7 @@ Invocable via `/command-name` in Claude Code. Place files in `.claude/commands/`
 
 | Name | Invocation | File | Description | Author |
 |------|-----------|------|-------------|--------|
-| _(none yet)_ | | | | |
+| dev-server | `/dev-server <start\|stop\|restart>` | [`.claude/commands/dev-server.md`](.claude/commands/dev-server.md) | Manage the local dev server. Auto-detects start command and port from package.json. | adharsh2208vthink |
 
 ---
 
@@ -78,7 +90,7 @@ Shell scripts triggered by Claude Code tool events. Place in `hooks/pre-tool/` o
 
 | Name | File | Trigger | Description | Author |
 |------|------|---------|-------------|--------|
-| _(none yet)_ | | | | |
+| check-naming-conventions | [`hooks/pre-tool/check-naming-conventions.sh`](hooks/pre-tool/check-naming-conventions.sh) | Write, Edit | Checks file naming conventions before Claude writes or edits a file. Enforces kebab-case (JS/TS), snake_case (Python), PascalCase (Java/components). Configurable via `.claude/naming-conventions.json`. | adharsh2208vthink |
 
 ### post-tool
 
@@ -94,7 +106,8 @@ CLAUDE.md snippets for always-follow instructions. Place files in `rules/`.
 
 | Name | File | Description | Author |
 |------|------|-------------|--------|
-| _(none yet)_ | | | |
+| file-organization | [`rules/file-organization.md`](rules/file-organization.md) | Instructs Claude to save plan/doc files to `docs/` and follow existing directory structure for new source files. | adharsh2208vthink |
+| planning-collaboration | [`rules/planning-collaboration.md`](rules/planning-collaboration.md) | Controls Claude's behaviour in Plan Mode — wait for user approval, share only meaningful findings, avoid auto-proceeding. | adharsh2208vthink |
 
 ---
 
