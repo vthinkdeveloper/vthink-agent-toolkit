@@ -1,0 +1,17 @@
+{
+  "_readme": "GitHub MCP server — enables Claude to read/write issues, PRs, repos, and code via the GitHub API. Requires a GitHub Personal Access Token.",
+  "_setup": [
+    "1. Create a GitHub PAT at https://github.com/settings/tokens (scopes: repo, read:org)",
+    "2. Set the token as an env var: export GITHUB_TOKEN=ghp_your_token",
+    "3. Paste the 'mcpServers' block below into your .claude/settings.json"
+  ],
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "$GITHUB_TOKEN"
+      }
+    }
+  }
+}

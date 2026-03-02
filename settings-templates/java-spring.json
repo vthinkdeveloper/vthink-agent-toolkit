@@ -1,0 +1,42 @@
+{
+  "_readme": "Claude Code settings template for a Java / Spring Boot project using Maven.",
+  "_usage": "Copy to .claude/settings.json in your project root. Adjust allow/deny rules to match your project structure.",
+  "permissions": {
+    "allow": [
+      "Bash(mvn *)",
+      "Bash(./mvnw *)",
+      "Bash(java *)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(ls *)",
+      "Bash(grep *)",
+      "Bash(find *)",
+      "WebSearch"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Read(.mvn/**)",
+      "Write(.mvn/**)",
+      "Edit(.mvn/**)",
+      "Read(.idea/**)",
+      "Write(.idea/**)",
+      "Edit(.idea/**)",
+      "Read(.run/**)",
+      "Write(.run/**)",
+      "Edit(.run/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/check-naming-conventions.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

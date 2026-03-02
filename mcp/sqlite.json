@@ -1,0 +1,13 @@
+{
+  "_readme": "SQLite MCP server — allows Claude to query a local SQLite database. Great for local dev, prototypes, and projects that use SQLite as their data store.",
+  "_setup": [
+    "1. Replace '/path/to/your/database.db' with the actual path to your SQLite file",
+    "2. Paste the 'mcpServers' block into your .claude/settings.json"
+  ],
+  "mcpServers": {
+    "sqlite": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sqlite", "/path/to/your/database.db"]
+    }
+  }
+}

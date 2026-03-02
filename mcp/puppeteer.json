@@ -1,0 +1,14 @@
+{
+  "_readme": "Puppeteer MCP server — gives Claude browser automation capabilities: navigate pages, take screenshots, fill forms, click elements, and scrape content. Useful for E2E testing, web scraping, and UI debugging.",
+  "_setup": [
+    "1. Ensure Node.js 18+ is installed",
+    "2. Paste the 'mcpServers' block into your .claude/settings.json",
+    "3. On first use, Puppeteer will download Chromium automatically"
+  ],
+  "mcpServers": {
+    "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_readme": "Filesystem MCP server — gives Claude scoped read/write access to directories outside the current project. Useful for monorepos, shared config dirs, or cross-project work.",
+  "_setup": [
+    "1. Replace the paths in 'args' with the directories Claude should have access to",
+    "2. Use absolute paths only",
+    "3. Paste the 'mcpServers' block into your .claude/settings.json"
+  ],
+  "_security": "Only grant access to directories that are needed. Do not include directories with secrets, credentials, or sensitive config.",
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/path/to/allowed/directory-1",
+        "/path/to/allowed/directory-2"
+      ]
+    }
+  }
+}

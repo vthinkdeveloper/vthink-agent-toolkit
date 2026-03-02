@@ -19,6 +19,9 @@ Browse the full catalog: **[CATALOG.md](CATALOG.md)**
 | Slash Commands | — | [`.claude/commands/`](.claude/commands/) |
 | Hooks | — | [`hooks/`](hooks/) |
 | Rules | — | [`rules/`](rules/) |
+| MCP Configs | — | [`mcp/`](mcp/) |
+| Settings Templates | — | [`settings-templates/`](settings-templates/) |
+| Workflows | — | [`workflows/`](workflows/) |
 
 ---
 
@@ -68,6 +71,9 @@ vthink-claudecode-toolkit/
 │   ├── pre-tool/           # Run before a tool executes
 │   └── post-tool/          # Run after a tool executes
 ├── rules/                  # CLAUDE.md snippets — always-follow instructions
+├── mcp/                    # MCP server config snippets (copy into settings.json)
+├── settings-templates/     # Pre-built .claude/settings.json by project type
+├── workflows/              # Multi-agent orchestration patterns
 ├── templates/              # Starter templates for new contributions
 ├── examples/               # Real-world usage examples
 └── docs/                   # Documentation

@@ -10,6 +10,9 @@ Thanks for contributing! This toolkit grows through shared expertise — the mor
 - **New Agent** — a specialized sub-agent with a defined role and responsibilities
 - **New Command** — a slash command (`.md` file in `.claude/commands/`)
 - **New Hook** — a shell script triggered by Claude Code events
+- **New MCP Config** — a ready-to-paste MCP server snippet for `.claude/settings.json`
+- **New Settings Template** — a `.claude/settings.json` starter for a project type
+- **New Workflow** — a multi-agent orchestration pattern
 - **Bug Fix / Improvement** — fix a broken prompt, improve clarity, update stale instructions
 - **Documentation** — improve README, getting-started, or inline comments
 
@@ -21,7 +24,7 @@ Thanks for contributing! This toolkit grows through shared expertise — the mor
 Use **kebab-case** for all files: `generate-endpoint.md`, `pre-commit-check.sh`
 
 ### Required Frontmatter
-All `.md` contribution files (skills, agents, commands) must include this frontmatter block at the top:
+All `.md` contribution files (skills, agents, commands, workflows) must include this frontmatter block at the top:
 
 ```yaml
 ---
@@ -39,11 +42,13 @@ tags: [tag1, tag2]
 - Skills: `frontend`, `backend`, `data`, `workflow`
 - Commands: `git`, `quality`, `generation`, `devops`, `utility`
 - Hooks: `pre-tool`, `post-tool`
+- Workflows: use descriptive tags instead of a fixed category list
 
 ### No Sensitive or Proprietary Information
 - No internal URLs, credentials, API keys, or company-specific project names
 - Generalize references to file paths, service names, and internal tooling
 - When in doubt, use config-file-driven approaches (e.g., read settings from a local `.json` file)
+- MCP configs must use environment variable references (`$ENV_VAR`) — never hardcoded secrets
 
 ---
 
@@ -57,6 +62,9 @@ tags: [tag1, tag2]
 | Pre-tool Hook | `hooks/pre-tool/` |
 | Post-tool Hook | `hooks/post-tool/` |
 | CLAUDE.md snippet | `rules/` |
+| MCP Config | `mcp/` |
+| Settings Template | `settings-templates/` |
+| Workflow | `workflows/` |
 
 ---
 
