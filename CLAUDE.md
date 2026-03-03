@@ -2,37 +2,18 @@
 
 This file provides Claude Code with context about this repository's structure and purpose.
 
-## First Time Here?
+## Tour
 
-First, resolve the Claude config directory and check if the dev has opted out:
-```bash
-CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
-test -f "$CLAUDE_DIR/.vthink-no-tour"
-```
+If a user says **"I'd like a tour"** (or similar), install the setup wizard and hand off:
 
-If that file exists — skip this section entirely and help them directly.
-
-Otherwise, greet them and ask:
-
-> "Hi! Would you like a quick tour of what's in the toolkit — skills, agents, slash commands, hooks, and more?"
-
-If they say **yes** — run the setup wizard:
 ```bash
 CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
 mkdir -p "$CLAUDE_DIR/agents"
 cp agents/utility/setup-wizard.md "$CLAUDE_DIR/agents/"
 ```
+
 Then tell them: "Done! Now open any project in Claude Code and say
 'Set up the vthink toolkit for this project' — the wizard will take it from there."
-
-If they say **no, and don't ask again** — create the opt-out flag:
-```bash
-CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
-touch "$CLAUDE_DIR/.vthink-no-tour"
-```
-Then tell them: "Got it — I won't ask again. To re-enable the tour anytime, delete `.vthink-no-tour` from your Claude config directory."
-
-If they say **no** (just this once) or already have a specific task — skip and help them directly.
 
 ---
 
