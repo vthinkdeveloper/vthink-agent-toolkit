@@ -15,7 +15,7 @@ mkdir -p ~/.claude/agents
 cp agents/utility/setup-wizard.md ~/.claude/agents/
 ```
 
-Then tell them: "Done! Now open any project in Claude Code and say 'I'd like a tour' — the wizard will start automatically."
+Then immediately invoke the setup wizard agent to start the tour.
 
 ---
 
