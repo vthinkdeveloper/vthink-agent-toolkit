@@ -4,17 +4,18 @@ This file provides Claude Code with context about this repository's structure an
 
 ## First Time Here?
 
-If the user has just cloned this repo and hasn't given you a specific task yet,
-proactively greet them and offer to run the setup wizard:
+First, check if the dev has opted out of the tour:
+```bash
+test -f ~/.claude/.vthink-no-tour
+```
 
-> "Hi! Looks like you just opened the vthink toolkit. Want me to run the setup
-> wizard? It takes 3–4 minutes and gives you a personalised tour of everything
-> in the toolkit, starred for your role and stack.
->
-> To get started, I just need to copy the wizard into your global Claude agents
-> folder. Shall I do that now?"
+If that file exists — skip this section entirely and help them directly.
 
-If they say yes — run:
+Otherwise, greet them and ask:
+
+> "Hi! Would you like a quick tour of what's in the toolkit — skills, agents, slash commands, hooks, and more?"
+
+If they say **yes** — run the setup wizard:
 ```bash
 mkdir -p ~/.claude/agents
 cp agents/utility/setup-wizard.md ~/.claude/agents/
@@ -22,7 +23,13 @@ cp agents/utility/setup-wizard.md ~/.claude/agents/
 Then tell them: "Done! Now open any project in Claude Code and say
 'Set up the vthink toolkit for this project' — the wizard will take it from there."
 
-If they already have a specific task in mind, skip this and help them directly.
+If they say **no, and don't ask again** — create the opt-out flag:
+```bash
+touch ~/.claude/.vthink-no-tour
+```
+Then tell them: "Got it — I won't ask again. To re-enable the tour anytime, delete `~/.claude/.vthink-no-tour`."
+
+If they say **no** (just this once) or already have a specific task — skip and help them directly.
 
 ---
 
