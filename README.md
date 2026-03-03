@@ -8,6 +8,25 @@
 
 ---
 
+## Start Here
+
+The fastest way to get set up is to **open this repo in Claude Code** — it'll
+offer to run the setup wizard automatically.
+
+Or trigger it yourself at any time:
+
+```bash
+mkdir -p ~/.claude/agents && cp agents/utility/setup-wizard.md ~/.claude/agents/
+```
+
+Then open any project in Claude Code and say:
+> *"Set up the vthink toolkit for this project"*
+
+The wizard learns about your role, scans your project, and builds you a
+personalised reference guide.
+
+---
+
 ## What's in the Toolkit
 
 Browse the full catalog: **[CATALOG.md](CATALOG.md)**
@@ -49,7 +68,7 @@ cp vthink-claudecode-toolkit/hooks/pre-tool/my-hook.sh \
 chmod +x your-project/.claude/hooks/pre-tool/my-hook.sh
 ```
 
-> See [`docs/getting-started.md`](docs/getting-started.md) for a full walkthrough.
+> See [`CATALOG.md`](CATALOG.md) to browse all available tools.
 
 ---
 
