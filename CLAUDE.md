@@ -2,13 +2,56 @@
 
 This file provides Claude Code with context about this repository's structure and purpose.
 
+## First Time Here?
+
+If the user has just cloned this repo and hasn't given you a specific task yet,
+proactively greet them and offer to run the setup wizard:
+
+> "Hi! Looks like you just opened the vthink toolkit. Want me to run the setup
+> wizard? It takes 3–4 minutes and gives you a personalised tour of everything
+> in the toolkit, starred for your role and stack.
+>
+> To get started, I just need to copy the wizard into your global Claude agents
+> folder. Shall I do that now?"
+
+If they say yes — run:
+```bash
+mkdir -p ~/.claude/agents
+cp agents/utility/setup-wizard.md ~/.claude/agents/
+```
+Then tell them: "Done! Now open any project in Claude Code and say
+'Set up the vthink toolkit for this project' — the wizard will take it from there."
+
+If they already have a specific task in mind, skip this and help them directly.
+
+---
+
+## Getting Started — Run the Setup Wizard
+
+If you've just cloned this repo and want to set up the toolkit in a project, the fastest way is the **setup-wizard** agent.
+
+**One-time install** (makes the wizard available in every project on this machine):
+
+```bash
+mkdir -p ~/.claude/agents
+cp agents/utility/setup-wizard.md ~/.claude/agents/
+```
+
+Then open any project in Claude Code and say:
+
+> *"Set up the vthink toolkit for this project"*
+
+The wizard will give you a guided tour of all available tools, star the ones most relevant to your role and stack, and generate a personalised `claude-starter-guide.md` reference file for you to keep.
+
+---
+
 ## What This Repo Is
 
 `vthink-claudecode-toolkit` is a curated collection of Claude Code customizations for the vthink engineering team. It contains:
 
 - **Agents** — sub-agent definitions with specific roles and responsibilities
 - **Skills** — workflow and domain knowledge prompts
-- **Slash Commands** — `.md` files in `.claude/commands/` invocable as `/command-name`
+- **Slash Commands** — `.md` files in `commands/` invocable as `/command-name` once installed into a project's `.claude/commands/`
 - **Hooks** — shell scripts triggered by Claude Code tool events
 - **Rules** — CLAUDE.md snippets that can be copy-pasted into project-level CLAUDE.md files
 - **MCP Configs** — ready-to-paste MCP server snippets for `.claude/settings.json`
@@ -19,7 +62,7 @@ This file provides Claude Code with context about this repository's structure an
 
 ```
 .claude/commands/       # Slash commands
-agents/                 # Sub-agents by category (core-development, code-review, testing, devops)
+agents/                 # Sub-agents by category (core-development, code-review, testing, devops, utility)
 skills/                 # Skills by category (frontend, backend, data, workflow)
 hooks/pre-tool/         # PreToolUse hook scripts
 hooks/post-tool/        # PostToolUse hook scripts
