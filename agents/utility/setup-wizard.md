@@ -256,13 +256,13 @@ After the tour, say: *"That's everything currently in the toolkit. Now let me pu
 
 ---
 
-## Phase 5 — Generate Personalised PDF Guide
+## Phase 5 — Generate Personalised Starter Guide
 
 Tell the user:
 
 > "I'm generating your personalised starter guide in the background — it'll cover every tool with examples tailored to your stack and role. I'll ask where to save it when it's ready.
 >
-> Where would you like to save it? (default: `./claude-starter-guide.pdf`)"
+> Where would you like to save it? (default: `./claude-starter-guide.md`)"
 
 Store the save path as `SAVE_PATH`.
 
@@ -293,11 +293,9 @@ All other tools:
 
 Your job:
 1. Write the full guide content as Markdown using the structure below
-2. Check if pandoc is available: `pandoc --version`
-3. If pandoc available: convert to PDF, save to /tmp/claude-starter-guide.pdf
-   If not available: save as /tmp/claude-starter-guide.md
-4. DO NOT save to the final destination — the user must confirm first
-5. Report back: temp path, format (pdf or md), and final intended path [SAVE_PATH]
+2. Save it to /tmp/claude-starter-guide.md
+3. DO NOT save to the final destination — the user must confirm first
+4. Report back: the temp path (/tmp/claude-starter-guide.md) and the final intended path [SAVE_PATH]
 
 ---
 
@@ -438,18 +436,18 @@ Copy the contents of $TOOLKIT_PATH/rules/<name>.md into your project's CLAUDE.md
 
 ---
 
-When the sub-agent completes, it reports back with the temp path and format. At that point ask the user:
+When the sub-agent completes, it reports back with the temp path. At that point ask the user:
 
-> "Your starter guide is ready ([pdf/md]). Shall I save it to `[SAVE_PATH]`?"
+> "Your starter guide is ready. Shall I save it to `[SAVE_PATH]`?"
 
-- If **yes** — run `cp /tmp/claude-starter-guide.[pdf|md] [SAVE_PATH]`. Confirm: *"Saved! Open `[SAVE_PATH]` to read your guide."*
+- If **yes** — run `cp /tmp/claude-starter-guide.md [SAVE_PATH]`. Confirm: *"Saved! Open `[SAVE_PATH]` in any Markdown viewer or right here in Claude Code."*
 - If **no** — *"No problem — let me know if you'd like it saved somewhere else."*
 
 ---
 
 ## Phase 6 — Optional Install
 
-After the PDF is handled, offer:
+After the guide is handled, offer:
 
 > "Now that you've seen everything — would you like me to install any of these tools into this project's `.claude/` folder?
 >
