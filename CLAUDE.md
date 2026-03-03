@@ -4,9 +4,10 @@ This file provides Claude Code with context about this repository's structure an
 
 ## First Time Here?
 
-First, check if the dev has opted out of the tour:
+First, resolve the Claude config directory and check if the dev has opted out:
 ```bash
-test -f ~/.claude/.vthink-no-tour
+CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+test -f "$CLAUDE_DIR/.vthink-no-tour"
 ```
 
 If that file exists — skip this section entirely and help them directly.
@@ -17,17 +18,19 @@ Otherwise, greet them and ask:
 
 If they say **yes** — run the setup wizard:
 ```bash
-mkdir -p ~/.claude/agents
-cp agents/utility/setup-wizard.md ~/.claude/agents/
+CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+mkdir -p "$CLAUDE_DIR/agents"
+cp agents/utility/setup-wizard.md "$CLAUDE_DIR/agents/"
 ```
 Then tell them: "Done! Now open any project in Claude Code and say
 'Set up the vthink toolkit for this project' — the wizard will take it from there."
 
 If they say **no, and don't ask again** — create the opt-out flag:
 ```bash
-touch ~/.claude/.vthink-no-tour
+CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
+touch "$CLAUDE_DIR/.vthink-no-tour"
 ```
-Then tell them: "Got it — I won't ask again. To re-enable the tour anytime, delete `~/.claude/.vthink-no-tour`."
+Then tell them: "Got it — I won't ask again. To re-enable the tour anytime, delete `.vthink-no-tour` from your Claude config directory."
 
 If they say **no** (just this once) or already have a specific task — skip and help them directly.
 
