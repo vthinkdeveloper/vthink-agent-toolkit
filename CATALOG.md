@@ -34,6 +34,11 @@ Sub-agents with defined roles and responsibilities. Place files in `agents/<cate
 |------|------|-------------|--------|
 | _(none yet)_ | | | |
 
+### utility
+
+| Name | File | Description | Author |
+|------|------|-------------|--------|
+| setup-wizard | [`agents/utility/setup-wizard.md`](agents/utility/setup-wizard.md) | Conversational onboarding agent that gives a guided tour of all toolkit tools, stars the most relevant ones for your role and stack, and generates a personalised PDF starter guide. | adharsh2208vthink |
 ---
 
 ## Skills
