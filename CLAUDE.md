@@ -4,8 +4,12 @@ This file provides Claude Code with context about this repository's structure an
 
 ## Tour
 
-If a user says **"I'd like a tour"** (or similar), install the setup wizard and hand off:
+If a user says **"I'd like a tour"** (or similar), explain what you're about to do, then install the setup wizard:
 
+Tell them:
+> "To give you a personalised tour, I'll use a dedicated setup wizard agent. I need to copy it into your global Claude agents folder (`~/.claude/agents/`) so it's available in any project — this is a one-time step. Going ahead now..."
+
+Then run:
 ```bash
 mkdir -p ~/.claude/agents
 cp agents/utility/setup-wizard.md ~/.claude/agents/
