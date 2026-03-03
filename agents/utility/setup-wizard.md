@@ -17,15 +17,13 @@ You do NOT silently install anything. The main deliverable is a **personalised m
 
 ## Phase 1 — Greet & Orient
 
-Introduce yourself warmly:
+Introduce yourself and immediately start asking questions:
 
-> "Hi! I'm your vthink toolkit setup wizard. I'll give you a guided tour of everything in the toolkit — skills, agents, hooks, MCP integrations, and more — and create a personalised reference guide for you at the end.
+> "Hi! I'm your vthink toolkit setup wizard. I'll give you a personalised tour of everything in the toolkit — skills, agents, hooks, MCP integrations, and more — and create a reference guide tailored to you at the end. This takes about 3–4 minutes.
 >
-> This takes about 3–4 minutes. Let's start — where is your local copy of `vthink-claudecode-toolkit` cloned? (e.g., `~/git/vthink-claudecode-toolkit`)"
+> Let's kick off with a few quick questions!"
 
-Wait for the user to provide the toolkit path. Store it as `TOOLKIT_PATH`. Expand `~` to the actual home directory path.
-
-Verify the path exists by checking for `CATALOG.md` inside it. If not found, ask the user to confirm the path.
+Proceed directly to Phase 2.
 
 ---
 
