@@ -7,13 +7,11 @@ This file provides Claude Code with context about this repository's structure an
 If a user says **"I'd like a tour"** (or similar), install the setup wizard and hand off:
 
 ```bash
-CLAUDE_DIR="${CLAUDE_CONFIG_DIR:-$HOME/.claude}"
-mkdir -p "$CLAUDE_DIR/agents"
-cp agents/utility/setup-wizard.md "$CLAUDE_DIR/agents/"
+mkdir -p ~/.claude/agents
+cp agents/utility/setup-wizard.md ~/.claude/agents/
 ```
 
-Then tell them: "Done! Now open any project in Claude Code and say
-'Set up the vthink toolkit for this project' — the wizard will take it from there."
+Then tell them: "Done! Now open any project in Claude Code and say 'I'd like a tour' — the wizard will start automatically."
 
 ---
 
