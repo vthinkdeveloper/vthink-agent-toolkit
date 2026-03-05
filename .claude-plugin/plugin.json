@@ -1,0 +1,11 @@
+{
+  "name": "vthink-toolkit",
+  "description": "vThink Claude Code toolkit — skills, agents, slash commands, and hooks",
+  "version": "1.0.0",
+  "author": {
+    "name": "vThink"
+  },
+  "repository": "https://github.com/vthinkdeveloper/vthink-claudecode-toolkit",
+  "commands": ["./.claude/commands/"],
+  "agents": ["./agents/"]
+}
