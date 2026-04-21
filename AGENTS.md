@@ -14,6 +14,7 @@ agents/<agent-name>/AGENT.md     # Agents — specialised sub-agents with a defi
 .claude/commands/                # Slash commands (Claude Code)
 platforms/claude-code/           # Claude Code-specific: hooks, settings-templates, mcp, rules
 workflows/                       # Multi-agent orchestration patterns
+output-styles/                   # Response style files controlling tone and formatting
 ```
 
 ## When Working in This Repo

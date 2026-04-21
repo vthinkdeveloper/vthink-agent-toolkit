@@ -18,6 +18,7 @@ platforms/claude-code/            # Claude Code-specific assets
   settings-templates/             # .claude/settings.json starters
   rules/                          # CLAUDE.md snippets
 .claude/commands/                 # Slash commands (Claude Code)
+output-styles/                    # Response style files (tone, structure, formatting)
 templates/                        # Starter templates for contributors
 ```
 

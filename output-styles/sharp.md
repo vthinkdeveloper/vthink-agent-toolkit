@@ -1,11 +1,6 @@
 ---
 name: sharp
 description: Pointed and explanatory — highlights best practices and direction changes without being verbose.
-version: 1.0.0
-author: adharsh2208vthink
-category: general
-tags: [concise, best-practices, educational, direct]
-keep-coding-instructions: true
 ---
 
 # Output Style: Sharp

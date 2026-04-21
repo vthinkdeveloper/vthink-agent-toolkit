@@ -66,7 +66,7 @@ Skills should be:
 | MCP Config (Claude Code) | `platforms/claude-code/mcp/` |
 | Settings Template (Claude Code) | `platforms/claude-code/settings-templates/` |
 | CLAUDE.md Snippet (Claude Code) | `platforms/claude-code/rules/` |
-| Output Style | `output-styles/` |
+| Output Style | `output-styles/<name>.md` |
 
 ---
 

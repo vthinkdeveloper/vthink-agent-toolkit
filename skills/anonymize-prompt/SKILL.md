@@ -1,7 +1,6 @@
 ---
 name: anonymize-prompt
 description: Generate a privacy-safe version of the current technical problem, safe to paste into external tools. Strips company names, project names, class names, URLs, and internal terminology while preserving the technical substance. Use when you need to search externally without leaking proprietary details.
-allowed-tools: Read, Grep, Glob
 ---
 
 # Anonymize Prompt

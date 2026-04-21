@@ -1,12 +1,14 @@
 # Private Plugin Distribution
 
-This guide explains how the vThink Claude Code toolkit is distributed as a private plugin marketplace, and how devs install and use it.
+> **Internal doc** — this describes how vThink distributes the toolkit as a private Claude Code plugin marketplace. Not relevant for the open-source audience.
+
+This guide explains how the vthink-agent-toolkit is distributed as a private plugin marketplace, and how devs install and use it.
 
 ## What is a plugin marketplace?
 
 A plugin marketplace is a GitHub repo with a `.claude-plugin/marketplace.json` file that lists installable tools. Claude Code reads it and lets devs install skills, agents, and commands from it. The repo can be **private** — no public access needed.
 
-The `vthink-claudecode-toolkit` repo IS the marketplace. When you install from it, you get all skills, agents, and commands in one step.
+The `vthink-agent-toolkit` repo IS the marketplace. When you install from it, you get all skills, agents, and commands in one step.
 
 ---
 
@@ -18,14 +20,14 @@ Use this when setting up a new machine or a new project.
 
 Prerequisite: your GitHub access must work. Test with:
 ```bash
-git clone git@github.com:vthinkdeveloper/vthink-claudecode-toolkit.git
+git clone git@github.com:vthinkdeveloper/vthink-agent-toolkit.git
 ```
 If that works, the plugin install will too.
 
 Then, inside any project in Claude Code:
 ```
-/plugin marketplace add vthinkdeveloper/vthink-claudecode-toolkit
-/plugin install vthink-toolkit@vthink-tools
+/plugin marketplace add vthinkdeveloper/vthink-agent-toolkit
+/plugin install vthink-agent-toolkit@vthink-tools
 ```
 
 All toolkit tools are now available in that project session.
@@ -40,12 +42,12 @@ When a project's `.claude/settings.json` includes the marketplace config below, 
     "vthink-tools": {
       "source": {
         "source": "github",
-        "repo": "vthinkdeveloper/vthink-claudecode-toolkit"
+        "repo": "vthinkdeveloper/vthink-agent-toolkit"
       }
     }
   },
   "enabledPlugins": {
-    "vthink-toolkit@vthink-tools": true
+    "vthink-agent-toolkit@vthink-tools": true
   }
 }
 ```
@@ -79,7 +81,7 @@ For clients who need strict control over what Claude Code tools are active, add 
   "strictKnownMarketplaces": [
     {
       "source": "github",
-      "repo": "vthinkdeveloper/vthink-claudecode-toolkit"
+      "repo": "vthinkdeveloper/vthink-agent-toolkit"
     }
   ]
 }
@@ -100,8 +102,8 @@ The `vthink-engagement-kit` is a second private marketplace containing the engag
 
 | Who | What to install |
 |-----|----------------|
-| Client devs | `vthink-toolkit@vthink-tools` only |
-| vThink consultants | Both `vthink-toolkit@vthink-tools` + `engagement-wizard@vthink-engagement` |
+| Client devs | `vthink-agent-toolkit@vthink-tools` only |
+| vThink consultants | Both `vthink-agent-toolkit@vthink-tools` + `engagement-wizard@vthink-engagement` |
 
 ---
 
@@ -109,8 +111,8 @@ The `vthink-engagement-kit` is a second private marketplace containing the engag
 
 | I want to... | Command |
 |-------------|---------|
-| Add the marketplace | `/plugin marketplace add vthinkdeveloper/vthink-claudecode-toolkit` |
-| Install all toolkit tools | `/plugin install vthink-toolkit@vthink-tools` |
+| Add the marketplace | `/plugin marketplace add vthinkdeveloper/vthink-agent-toolkit` |
+| Install all toolkit tools | `/plugin install vthink-agent-toolkit@vthink-tools` |
 | Update to latest version | `/plugin marketplace update vthink-tools` |
 | See installed plugins | `/plugin list` |
 | Validate the marketplace | `/plugin validate .` |

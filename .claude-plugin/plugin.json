@@ -8,6 +8,6 @@
   "homepage": "https://github.com/vthinkdeveloper/vthink-agent-toolkit",
   "repository": "https://github.com/vthinkdeveloper/vthink-agent-toolkit",
   "license": "MIT",
-  "commands": "./.claude/commands",
-  "agents": "./agents"
+  "commands": ["./.claude/commands"],
+  "agents": ["./agents"]
 }
