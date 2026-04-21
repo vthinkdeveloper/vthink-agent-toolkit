@@ -34,11 +34,6 @@ A collection of battle-tested workflows, agents, and skills ready to drop into a
 <details>
 <summary><b>Claude Code</b></summary>
 
-**Marketplace:**
-```
-/plugin marketplace add vthinkdeveloper/vthink-agent-toolkit
-```
-
 **Manual — copy a skill into your project:**
 ```bash
 mkdir -p your-project/.claude/skills
