@@ -1,11 +1,8 @@
 # vthink-agent-toolkit
 
-> Production-grade skills, agents, and workflows for AI coding agents.
+> A curated toolkit of skills, agents, and workflows for building software with Agentic AI.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-
-Skills encode the workflows, quality gates, and engineering practices that senior engineers use — packaged so any AI agent follows them consistently. Works with Claude Code, Cursor, Windsurf, Gemini CLI, and more.
+Skills are how engineers teach agents to work the way they do.
 
 ---
 
