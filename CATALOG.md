@@ -18,6 +18,7 @@ Workflow and domain knowledge prompts. Each skill lives at `skills/<name>/SKILL.
 | commit-push-pr | [`skills/commit-push-pr/SKILL.md`](skills/commit-push-pr/SKILL.md) | Stage, commit, push, and open a pull request in one workflow. |
 | conventions-check | [`skills/conventions-check/SKILL.md`](skills/conventions-check/SKILL.md) | Check code changes against project conventions discovered from the codebase itself. |
 | generate-endpoint | [`skills/generate-endpoint/SKILL.md`](skills/generate-endpoint/SKILL.md) | Scaffold a complete CRUD endpoint adapted to your project's existing structure and conventions. |
+| html-it | [`skills/html-it/SKILL.md`](skills/html-it/SKILL.md) | Convert a markdown document into a rich, standalone HTML file with embedded CSS — card-based sections, GitHub-ish color palette, opens in browser. |
 | give-me-a-commit-message | [`skills/give-me-a-commit-message/SKILL.md`](skills/give-me-a-commit-message/SKILL.md) | Suggest a commit message from current changes without committing. |
 | qa-guide | [`skills/qa-guide/SKILL.md`](skills/qa-guide/SKILL.md) | Generate a structured QA testing guide for a pull request. |
 | ship | [`skills/ship/SKILL.md`](skills/ship/SKILL.md) | Conventions check + commit with ticket ID from branch name + push. |
