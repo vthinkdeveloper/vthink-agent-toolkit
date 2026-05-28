@@ -2,11 +2,11 @@
 name: html-it
 description: >
   Convert a markdown document (plan, design doc, alignment doc, review notes) into a
-  rich, standalone HTML file with embedded CSS — styled to match the project's existing
-  HTML docs (light theme, system fonts, card-based sections, GitHub-ish color palette).
-  Inspired by https://thariqs.github.io/html-effectiveness/ — the goal is a self-contained
-  .html the reader opens in a browser instead of squinting at a wall of markdown. Invoke
-  with /html-it [path-to-md]. If no path is given, defaults to the most recently
+  rich, standalone HTML file with embedded CSS — light theme, system fonts, card-based
+  sections, GitHub-ish color palette. Inspired by the Claude blog post on the
+  unreasonable effectiveness of HTML. The goal is a self-contained .html the reader
+  opens in a browser instead of squinting at a wall of markdown. Invoke with
+  /html-it [path-to-md]. If no path is given, defaults to the most recently
   modified .md in ~/.claude/plans/ or the current working directory.
 argument-hint: "[optional: path to a .md file]"
 allowed-tools: Read, Write, Bash, Glob
@@ -16,7 +16,7 @@ allowed-tools: Read, Write, Bash, Glob
 
 Render a markdown document as a standalone, self-contained HTML file with embedded CSS — the kind of document the user can open in a browser, screenshot, or share via Slack/email.
 
-The gallery at https://thariqs.github.io/html-effectiveness/ is the **aspirational style reference**: rich, scannable, opinionated layout — not a generic markdown→HTML dump. When the source markdown has structure (sections, decisions, tables, status, checklists, before/after), reflect that structure visually with cards, badges, pills, dividers — not just `<h2>` and `<p>`.
+See https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html for the **aspirational style reference**: rich, scannable, opinionated layout — not a generic markdown→HTML dump. When the source markdown has structure (sections, decisions, tables, status, checklists, before/after), reflect that structure visually with cards, badges, pills, dividers — not just `<h2>` and `<p>`.
 
 ## Workflow
 
@@ -47,7 +47,7 @@ This is **not** a literal markdown-to-HTML conversion. You're authoring an HTML 
 
 ### Step 3: Apply the project's established style
 
-Use these CSS tokens (matching the existing HTML docs in `docs/wcbi-*-alignment.html` in this user's projects). Put the full `<style>` block inline in `<head>`:
+Use these CSS tokens as your design system. Put the full `<style>` block inline in `<head>`:
 
 ```css
 :root {
