@@ -22,6 +22,7 @@ Workflow and domain knowledge prompts. Each skill lives at `skills/<name>/SKILL.
 | give-me-a-commit-message | [`skills/give-me-a-commit-message/SKILL.md`](skills/give-me-a-commit-message/SKILL.md) | Suggest a commit message from current changes without committing. |
 | qa-guide | [`skills/qa-guide/SKILL.md`](skills/qa-guide/SKILL.md) | Generate a structured QA testing guide for a pull request. |
 | ship | [`skills/ship/SKILL.md`](skills/ship/SKILL.md) | Conventions check + commit with ticket ID from branch name + push. |
+| work-towards-alignment | [`skills/work-towards-alignment/SKILL.md`](skills/work-towards-alignment/SKILL.md) | Collaborative user–Claude alignment session on a plan, design, or PR review — probes foundational knowledge first, then walks claims one by one until the user explicitly signals alignment. |
 
 ---
 
