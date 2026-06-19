@@ -12,6 +12,7 @@ Workflow and domain knowledge prompts. Each skill lives at `skills/<name>/SKILL.
 
 | Name | File | Description |
 |------|------|-------------|
+| align | [`skills/align/SKILL.md`](skills/align/SKILL.md) | Lightweight markdown-only alignment skill — same two-phase probe-then-walk-claims logic as work-towards-alignment, but outputs plain .md instead of HTML. Safe for any agent runtime. |
 | anonymize-prompt | [`skills/anonymize-prompt/SKILL.md`](skills/anonymize-prompt/SKILL.md) | Generate a privacy-safe, anonymized prompt for pasting into external tools without leaking proprietary details. |
 | bdd-gherkin | [`skills/bdd-gherkin/SKILL.md`](skills/bdd-gherkin/SKILL.md) | Generate BDD Gherkin feature files from requirements through a collaborative clarifying conversation. |
 | commit-push | [`skills/commit-push/SKILL.md`](skills/commit-push/SKILL.md) | Stage, generate a Conventional Commits message, get user approval, commit, and push. |
