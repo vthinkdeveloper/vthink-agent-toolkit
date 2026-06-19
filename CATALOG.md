@@ -12,7 +12,6 @@ Workflow and domain knowledge prompts. Each skill lives at `skills/<name>/SKILL.
 
 | Name | File | Description |
 |------|------|-------------|
-| align | [`skills/align/SKILL.md`](skills/align/SKILL.md) | Lightweight markdown-only alignment skill — same two-phase probe-then-walk-claims logic as work-towards-alignment, but outputs plain .md instead of HTML. Safe for any agent runtime. |
 | anonymize-prompt | [`skills/anonymize-prompt/SKILL.md`](skills/anonymize-prompt/SKILL.md) | Generate a privacy-safe, anonymized prompt for pasting into external tools without leaking proprietary details. |
 | bdd-gherkin | [`skills/bdd-gherkin/SKILL.md`](skills/bdd-gherkin/SKILL.md) | Generate BDD Gherkin feature files from requirements through a collaborative clarifying conversation. |
 | commit-push | [`skills/commit-push/SKILL.md`](skills/commit-push/SKILL.md) | Stage, generate a Conventional Commits message, get user approval, commit, and push. |
@@ -24,6 +23,7 @@ Workflow and domain knowledge prompts. Each skill lives at `skills/<name>/SKILL.
 | qa-guide | [`skills/qa-guide/SKILL.md`](skills/qa-guide/SKILL.md) | Generate a structured QA testing guide for a pull request. |
 | ship | [`skills/ship/SKILL.md`](skills/ship/SKILL.md) | Conventions check + commit with ticket ID from branch name + push. |
 | work-towards-alignment | [`skills/work-towards-alignment/SKILL.md`](skills/work-towards-alignment/SKILL.md) | Collaborative user–Claude alignment session on a plan, design, or PR review — probes foundational knowledge first, then walks claims one by one until the user explicitly signals alignment. |
+| work-towards-alignment-simple | [`skills/work-towards-alignment-simple/SKILL.md`](skills/work-towards-alignment-simple/SKILL.md) | Markdown-only alignment skill — same two-phase probe-then-walk-claims session, plain .md output, no HTML. |
 
 ---
 
