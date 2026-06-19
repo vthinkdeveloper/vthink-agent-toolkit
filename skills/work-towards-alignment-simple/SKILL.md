@@ -1,17 +1,11 @@
 ---
-name: align
-description: Lightweight, markdown-only alignment skill. Runs the same two-phase collaborative session as work-towards-alignment (probe foundational knowledge → walk claims one by one) but outputs a plain .md file instead of HTML — safe to use with any agent runtime that struggles with HTML generation. Invoke with /align <path-to-plan-or-topic>.
+name: work-towards-alignment-simple
+description: Markdown-only alignment skill. Two-phase collaborative session — probe foundational knowledge first, then walk claims one by one until the user explicitly signals alignment. All output is plain .md. Invoke with /work-towards-alignment-simple <path-to-plan-or-topic>.
 ---
 
-# align
+# work-towards-alignment-simple
 
-A simplified, markdown-only alignment session. Same logic as `work-towards-alignment` — two-phase, user-paced, never declares alignment unilaterally — but all output is plain markdown. No HTML required.
-
-## When to use this instead of `work-towards-alignment`
-
-- The agent runtime cannot reliably produce HTML
-- The repo prefers plain-text artefacts
-- The user explicitly wants a lightweight version
+A two-phase collaborative alignment session. User-paced, never declares alignment unilaterally. All output is plain markdown.
 
 ## Inputs
 
@@ -147,7 +141,7 @@ Wait. Do not declare alignment yourself.
 
 #### Step 8 — End the session
 
-User signals alignment ("aligned", "I'm good", "approved", `/align done`):
+User signals alignment ("aligned", "I'm good", "approved", `/work-towards-alignment-simple done`):
 
 1. Update the doc: `**Status:** 🟢 Aligned` + `**Aligned on:** YYYY-MM-DD`
 2. Recap in chat (under 8 lines) what was agreed.
