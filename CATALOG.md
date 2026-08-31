@@ -27,6 +27,19 @@ Workflow and domain knowledge prompts. Each skill lives at `skills/<name>/SKILL.
 
 ---
 
+### Skills for Not Losing Your Skills
+
+A themed collection (conference talk companion) grouped into three habits — Align, Assert, Reinforce — for staying sharp while an AI agent writes the code. Note: these live in nested subfolders (`skills/skills-for-not-losing-your-skills/<pillar>/<name>/SKILL.md`) rather than the flat `skills/<name>/SKILL.md` convention, and the `work-towards-alignment` skill here is a separate, newer variant from the top-level one above (three-phase, writes the alignment doc as an upfront learning map) — same `name`, different behavior, so only one should be installed/invoked at a time.
+
+| Pillar | Name | File | Description |
+|--------|------|------|-------------|
+| Align | work-towards-alignment | [`skills/skills-for-not-losing-your-skills/align/work-towards-alignment/SKILL.md`](skills/skills-for-not-losing-your-skills/align/work-towards-alignment/SKILL.md) | Three-phase collaborative alignment session — writes the alignment doc upfront as a learning map (every item + prerequisite marked pending), probes and teaches foundational knowledge live, then walks each claim. Session ends only when the user explicitly signals alignment. |
+| Align | teachable-moment | [`skills/skills-for-not-losing-your-skills/align/teachable-moment/SKILL.md`](skills/skills-for-not-losing-your-skills/align/teachable-moment/SKILL.md) | Turns one implementation decision into a short, durable lesson on the general concept behind it — gauges existing knowledge, grounds the curriculum in an externally-fetched industry-standard answer, teaches core-first, grills 2-3 questions, and saves a due-dated HTML concept card. |
+| Assert | grill-my-alignment | [`skills/skills-for-not-losing-your-skills/assert/grill-my-alignment/SKILL.md`](skills/skills-for-not-losing-your-skills/assert/grill-my-alignment/SKILL.md) | Relentlessly quizzes the user on concepts an alignment session already taught, to verify the understanding actually stuck — rubric-graded, confidence-first, no hints on the diagnostic pass, ends with a solid/shaky/gap scorecard. |
+| Reinforce | review-learnings | [`skills/skills-for-not-losing-your-skills/reinforce/review-learnings/SKILL.md`](skills/skills-for-not-losing-your-skills/reinforce/review-learnings/SKILL.md) | Spaced, interleaved re-review of concept cards built up over time — cold retrieval before reveal, discrimination questions against confusable concepts, and an expanding-interval (Leitner/SRS) reschedule after each session. |
+
+---
+
 ## Agents
 
 Specialised sub-agents with defined roles. Each agent lives at `agents/<name>/AGENT.md`.
